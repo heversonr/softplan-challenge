@@ -1,0 +1,23 @@
+version: '3.4'
+
+services:
+    api1:
+        build:  .
+        command: api1
+        ports: 
+         - 5002:80
+        environment:
+          ASPNETCORE_ENVIRONMENT: Development
+    api2:
+        build:  .
+        links:
+            - api1:api1
+        command: api2
+        depends_on:
+            - api1
+        ports: 
+         - 5003:80
+        environment:
+          ASPNETCORE_ENVIRONMENT: Development
+          ConnectionStrings__Api1Endpoint: http://api1
+          ConnectionStrings__GitHubProjectUrl: https://github.com/heversonr/softplan-challenge
