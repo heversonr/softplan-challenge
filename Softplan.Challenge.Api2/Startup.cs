@@ -50,6 +50,8 @@ namespace Softplan.Challenge.Api2
                 c.IncludeXmlComments(xmlPath);
             });
 
+            services.AddHealthChecks();
+
             services.AddVersionedApiExplorer(p =>
             {
                 p.GroupNameFormat = "'v'VVV";
@@ -89,6 +91,7 @@ namespace Softplan.Challenge.Api2
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHealthChecks("/api/healthcheck");
             });
         }
     }
