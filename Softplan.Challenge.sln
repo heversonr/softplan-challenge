@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softplan.Challenge.Applicat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softplan.Challenge.Domain", "Softplan.Challenge.Domain\Softplan.Challenge.Domain.csproj", "{714D2B1E-2E68-4FC3-989F-194B2F21B15F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softplan.Challenge.InterestCalculation.Api", "Softplan.Challenge.Api2\Softplan.Challenge.InterestCalculation.Api.csproj", "{ED193F83-C926-427B-A395-45BA7483CB5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Softplan.Challenge.InterestCalculation.Api", "Softplan.Challenge.InterestCalculation.Api\Softplan.Challenge.InterestCalculation.Api.csproj", "{ED193F83-C926-427B-A395-45BA7483CB5D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
