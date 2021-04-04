@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Softplan.Challenge.Api2": {
+    "Softplan.Challenge.InterestCalculation.Api": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "swagger",

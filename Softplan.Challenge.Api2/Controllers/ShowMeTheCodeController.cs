@@ -1,12 +1,10 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Softplan.Challenge.Application.Requests.V1.CalculateInterest;
-using System.Threading;
+﻿using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
+using Microsoft.AspNetCore.Mvc;
 using Softplan.Challenge.Application.Requests.V1.ShowMeTheCode;
 
-
-namespace Softplan.Challenge.Api2.Controllers
+namespace Softplan.Challenge.InterestCalculation.Api.Controllers
 {
     [ApiController]
     [ApiVersion("1.0")]

@@ -1,8 +1,8 @@
 #!/bin/bash
 
 case $1 in
-    api1)        cd api1 && dotnet Softplan.Challenge.Api1.dll ;;
-    api2)        cd api2 && dotnet Softplan.Challenge.Api2.dll ;;
+    interest_rate_api)        cd interest_rate_api && dotnet Softplan.Challenge.InterestRate.Api.dll ;;
+    interest_calculation_api)        cd interest_calculation_api && dotnet Softplan.Challenge.InterestCalculation.Api.dll ;;
     debug)          /bin/bash ;;
     *)              echo "OPCAO NAO ENCONTRADA"
 esac

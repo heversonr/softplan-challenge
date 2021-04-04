@@ -10,13 +10,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Softplan.Challenge.Application.Extensions;
-using Softplan.Challenge.Application.Services.Api1;
-using Softplan.Challenge.Application.Services.InterestCalculation.V1;
-using Softplan.Challenge.Application.Services.InterestRateGateway.V1;
-using Softplan.Challenge.Domain.Services.V1;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
-namespace Softplan.Challenge.Api2
+namespace Softplan.Challenge.InterestCalculation.Api
 {
     public class Startup
     {
@@ -43,7 +39,7 @@ namespace Softplan.Challenge.Api2
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Softplan.Challenge.Api2", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Softplan.Challenge.InterestCalculation.Api", Version = "v1" });
 
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);

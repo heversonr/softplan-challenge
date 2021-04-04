@@ -7,7 +7,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using Softplan.Challenge.Application.Extensions;
 
-namespace Softplan.Challenge.Api1
+namespace Softplan.Challenge.InterestRate.Api
 {
     public class Startup
     {
@@ -36,7 +36,7 @@ namespace Softplan.Challenge.Api1
 
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Softplan.Challenge.Api1", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Softplan.Challenge.InterestRate.Api", Version = "v1" });
             });
         }
 
@@ -47,7 +47,7 @@ namespace Softplan.Challenge.Api1
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Softplan.Challenge.Api1 v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Softplan.Challenge.InterestRate.Api v1"));
             }
 
             app.UseHttpsRedirection();

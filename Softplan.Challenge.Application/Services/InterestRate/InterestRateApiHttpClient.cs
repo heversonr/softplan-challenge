@@ -3,19 +3,18 @@ using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
-using Softplan.Challenge.Application.Services.Api1.Model.Response;
+using Softplan.Challenge.Application.Services.InterestRate.Model.Response;
 using Softplan.Challenge.Application.Utils;
-using Softplan.Challenge.Domain.Services;
 
-namespace Softplan.Challenge.Application.Services.Api1
+namespace Softplan.Challenge.Application.Services.InterestRate
 {
-    public class Api1HttpClient : IApi1HttpClient
+    public class InterestRateApiHttpClient : IInterestRateApiHttpClient
     {
         private readonly HttpClient _httpClient;
-        private readonly ILogger<Api1HttpClient> _logger;
+        private readonly ILogger<InterestRateApiHttpClient> _logger;
 
-        public Api1HttpClient(HttpClient httpClient,
-            ILogger<Api1HttpClient> logger)
+        public InterestRateApiHttpClient(HttpClient httpClient,
+            ILogger<InterestRateApiHttpClient> logger)
         {
             _httpClient = httpClient;
             _logger = logger;

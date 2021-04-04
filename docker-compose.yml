@@ -1,23 +1,23 @@
 version: '3.4'
 
 services:
-    api1:
+    interest_rate_api:
         build:  .
-        command: api1
+        command: interest_rate_api
         ports: 
          - 5002:80
         environment:
           ASPNETCORE_ENVIRONMENT: Development
-    api2:
+    interest_calculation_api:
         build:  .
         links:
-            - api1:api1
-        command: api2
+            - interest_rate_api:interest_rate_api
+        command: interest_calculation_api
         depends_on:
-            - api1
+            - interest_rate_api
         ports: 
          - 5003:80
         environment:
           ASPNETCORE_ENVIRONMENT: Development
-          ConnectionStrings__Api1Endpoint: http://api1
+          ConnectionStrings__InterestRateApi: http://interest_rate_api
           ConnectionStrings__GitHubProjectUrl: https://github.com/heversonr/softplan-challenge

@@ -3,8 +3,8 @@ using System.Reflection;
 using MediatR;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Softplan.Challenge.Application.Services.Api1;
 using Softplan.Challenge.Application.Services.InterestCalculation.V1;
+using Softplan.Challenge.Application.Services.InterestRate;
 using Softplan.Challenge.Application.Services.InterestRateGateway.V1;
 using Softplan.Challenge.Domain.Services.V1;
 
@@ -21,9 +21,9 @@ namespace Softplan.Challenge.Application.Extensions
             services.AddSingleton<IInterestCalculationService, InterestCalculationService>();
             services.AddTransient<IInterestRateGateway, InterestRateGateway>();
 
-            services.AddHttpClient<IApi1HttpClient, Api1HttpClient>(client =>
+            services.AddHttpClient<IInterestRateApiHttpClient, InterestRateApiHttpClient>(client =>
             {
-                client.BaseAddress = new Uri(configuration.GetConnectionString("Api1Endpoint"));
+                client.BaseAddress = new Uri(configuration.GetConnectionString("InterestRateApi"));
             });
 
             return services;

@@ -4,8 +4,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Softplan.Challenge.Application.Requests.V1.GetInterestRate;
 
-
-namespace Softplan.Challenge.Api1.Controllers.V1
+namespace Softplan.Challenge.InterestRate.Api.Controllers.V1
 {
     [ApiController]
     [ApiVersion("1.0")]
