@@ -7,4 +7,5 @@
 - Na pasta raiz do projeto, execute os seguintes comandos:
   - **docker-compose build**
   - **docker-compose up**
-  - Abra um navegador e acesse `http://localhost:5003/swagger/index.html` para acessar a documentação
+
+- Abra um navegador e acesse `http://localhost:5003/swagger/index.html` para acessar a documentação
